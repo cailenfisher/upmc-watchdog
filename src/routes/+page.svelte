@@ -11,11 +11,5 @@
 </svelte:head>
 
 <section>
-  <h1>Western Maryland Emergency Room Complaints</h1>
-
-  <h2>Patient survey</h2>
-</section>
-
-<section>
   <Survey />
 </section>
