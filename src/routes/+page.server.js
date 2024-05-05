@@ -4,6 +4,7 @@ import { supabase } from "../lib/supabaseClient";
 export const actions = {
     default: async ({ request }) => {        
     const data = Object.fromEntries(await request.formData());      
+    
       const result = await supabase.from('survey').insert(data)
         
       if (result.error) {

@@ -43,7 +43,10 @@
           </div>
           <div>
             <Text name="email" label="Email (optional)" />
-            <div class="text-sm text-gray-500">Include your email if you wish to be contacted in the event of audit or investigation.</div>
+            <div class="text-sm text-gray-500">
+              Include your email if you wish to be contacted in the event of
+              audit or investigation.
+            </div>
           </div>
           <div>
             <label for="visit_length">Length of time in ER (hours)</label>
@@ -71,6 +74,7 @@
             >
             <textarea
               id="issue"
+              name="issue"
               rows="6"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Summary of what brought you to the ER"
@@ -79,8 +83,9 @@
               <div>
                 <input
                   id="correct_diagnosis"
+                  name="correct_diagnosis"
                   type="checkbox"
-                  value=""
+                  value="true"
                   class="w-4 h-4 mt-0.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label for="correct_diagnosis" class="ml-2">
@@ -89,8 +94,9 @@
               </div>
               <input
                 id="correct_medication"
+                name="correct_medication"
                 type="checkbox"
-                value=""
+                value="true"
                 class="w-4 h-4 mt-0.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
               <label for="correct_medication" class="ml-2">
@@ -100,20 +106,38 @@
             <div>
               <input
                 id="issue_resolved"
+                name="issue_resolved"
                 type="checkbox"
-                value=""
+                value="true"
                 class="w-4 h-4 mt-0.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
               <label for="issue_resolved" class="ml-2">
                 Medical issue resolved</label
               >
             </div>
+
+            <hr class="t my-4" />
+
+            <div>
+              <input
+                id="true_statement"
+                name="true_statement"
+                type="checkbox"
+                value={true}
+                class="w-4 h-4 mt-0.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label for="true_statement" class="ml-2">
+                I attest that the information written above is true to the best
+                of my knowledge.</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="my-4 py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              >Send my Survey</button
+            >
           </div>
-          <button
-            type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            >Send my Survey</button
-          >
         </form>
       </div>
     </div>
