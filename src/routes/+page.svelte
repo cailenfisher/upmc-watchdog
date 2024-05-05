@@ -1,5 +1,12 @@
 <script>
   import Survey from "../lib/components/Survey/Survey.svelte";
+  export let form;
+
+  let showSuccess = false;
+
+  if (form?.success) {
+    showSuccess = true;
+  }
 </script>
 
 <svelte:head>
@@ -11,5 +18,9 @@
 </svelte:head>
 
 <section>
-  <Survey />
+  {#if showSuccess}
+    Thank you!
+  {:else}
+    <Survey />
+  {/if}
 </section>

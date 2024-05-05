@@ -24,7 +24,7 @@
         >
           Patient experience survey
         </h2>
-        <form action="#" class="space-y-8">
+        <form method="post" class="space-y-8">
           <div>
             <Text name="first_name" label="First Name" required="required" />
           </div>
