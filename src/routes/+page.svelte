@@ -1,5 +1,6 @@
 <script>
   import Survey from "../lib/components/Survey/Survey.svelte";
+  import Thankyou from "../lib/components/Survey/Thankyou.svelte";
   export let form;
 
   let showSuccess = false;
@@ -19,7 +20,7 @@
 
 <section>
   {#if showSuccess}
-    Thank you!
+    <Thankyou />
   {:else}
     <Survey />
   {/if}
