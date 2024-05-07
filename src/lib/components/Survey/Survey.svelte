@@ -8,13 +8,13 @@
       <h1
         class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 lg:mb-8 md:text-4xl dark:text-white"
       >
-        Western Maryland Emergency Room Complaints
+        UPMC Western Maryland Emergency Room Complaints
       </h1>
     </div>
     <div class="grid gap-16 lg:grid-cols-3">
-      <div class="hidden lg:block">
+      <div class="">
         <h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-          Mission
+          Purpose of this database
         </h3>
         It is common knowledge among residents of Western Maryland and the surrounding
         tri-state region that the quality of care found within the Emergency Room
