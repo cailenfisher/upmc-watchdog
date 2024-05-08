@@ -1,8 +1,12 @@
 <script>
-  import Survey from "../lib/components/Survey/Survey.svelte";
+  import Counter from "../lib/components/Counter/Counter.svelte";
+import Survey from "../lib/components/Survey/Survey.svelte";
   import Thankyou from "../lib/components/Survey/Thankyou.svelte";
+  
   export let form;
+  export let data;
 
+  let {counter} = data;
   let showSuccess = false;
 
   if (form?.success) {
@@ -24,4 +28,7 @@
   {:else}
     <Survey />
   {/if}
+</section>
+<section>
+	<Counter {counter} />
 </section>

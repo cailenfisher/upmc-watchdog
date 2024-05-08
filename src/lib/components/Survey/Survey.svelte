@@ -1,5 +1,7 @@
 <script>
   import Text from "./Text.svelte";
+
+  let first_name;
 </script>
 
 <section class="bg-white dark:bg-gray-900">
@@ -36,7 +38,24 @@
         </h2>
         <form method="post" class="space-y-8">
           <div>
-            <Text name="first_name" label="First Name" required="required" />
+            <div>
+                <input
+                  on:change={(event) => {
+                    if (event.target.checked) {
+                        first_name = 'Anonymous'
+                    }
+                  }}
+                  id="anonymous"
+                  name="anonymous"
+                  type="checkbox"
+                  value="true"
+                  class="w-4 h-4 mt-0.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label for="issue_resolved" class="ml-2">
+                    I prefer to remain anonymous
+                </label>
+              </div>              
+            <Text name="first_name" label="First Name" required="required" value={first_name} />
           </div>
           <div>
             <Text name="last_name" label="Last name (optional)" />
@@ -67,6 +86,9 @@
             />
           </div>
           <div class="sm:col-span-2">
+            <div class="text-lg italic font-bold mb-6">
+                Please do not provide any information that would violate privacy laws, such as birthdate, UPMC account number, etc.
+            </div>
             <label
               for="issue"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
