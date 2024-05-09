@@ -89,7 +89,8 @@
             <div class="text-lg italic font-bold mb-6">
                 Please do not provide any information that would violate privacy laws, such as birthdate, UPMC account number, etc.
             </div>
-            <label
+            <div>
+                <label
               for="issue"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
               >Description of issue</label
@@ -101,6 +102,19 @@
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Summary of what brought you to the ER"
             ></textarea>
+            </div>
+            <div><label
+                for="experience"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                >Description of your experience with the ER, including any concerns</label
+              >
+              <textarea
+                id="experience"
+                name="experience"
+                rows="6"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Summary of what brought you to the ER"
+              ></textarea></div>
             <div class="mt-4">
               <div>
                 <input
